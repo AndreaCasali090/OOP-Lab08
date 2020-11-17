@@ -1,5 +1,10 @@
 package it.unibo.oop.lab.mvcio;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
 /**
  * 
  */
@@ -27,5 +32,27 @@ public class Controller {
      * System.getProperty("file.separator"). The combined use of those methods leads
      * to a software that runs correctly on every platform.
      */
+    private static final String PATH = System.getProperty("user.home") + System.getProperty("file.separator") + "output.txt";
+    private static File currentFile = new File(PATH);
 
+    public static File getCurrentFile() {
+        return currentFile;
+    }
+
+    public static void setCurrentFile(final File currentFile) {
+        Controller.currentFile = currentFile;
+    }
+
+    public static String getPath() {
+        return currentFile.getAbsolutePath(); 
+    }
+
+    public static void writeOnFile(final String text) throws IOException {
+        final BufferedWriter writer = new BufferedWriter(new FileWriter(currentFile.getPath()));
+        try {
+            writer.write(text);
+        } finally {
+            writer.close();
+        }
+    }
 }
