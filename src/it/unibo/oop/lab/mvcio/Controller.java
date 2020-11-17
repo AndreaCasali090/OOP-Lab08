@@ -34,7 +34,6 @@ public class Controller {
      */
     private static final String PATH = System.getProperty("user.home") + System.getProperty("file.separator") + "output.txt";
     private static File currentFile = new File(PATH);
-
     public static File getCurrentFile() {
         return currentFile;
     }

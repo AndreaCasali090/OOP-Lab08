@@ -3,10 +3,10 @@
  */
 package it.unibo.oop.lab.simplegui;
 
-import java.awt.BorderLayout;
-import java.awt.Dimension;
+import java.awt.BorderLayout; 
+//import java.awt.Dimension;
 import java.awt.TextField;
-import java.awt.Toolkit;
+//import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Random;

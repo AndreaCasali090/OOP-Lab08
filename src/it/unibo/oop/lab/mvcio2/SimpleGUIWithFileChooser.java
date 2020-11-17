@@ -1,6 +1,6 @@
 package it.unibo.oop.lab.mvcio2;
 
-import java.awt.BorderLayout;
+import java.awt.BorderLayout; 
 import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
@@ -15,7 +15,6 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 import it.unibo.oop.lab.mvcio.Controller;
-import it.unibo.oop.lab.mvcio.SimpleGUI;
 
 /**
  * A very simple program using a graphical interface.
