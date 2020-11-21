@@ -9,6 +9,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintStream;
+import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.util.Random;
 
@@ -17,6 +18,8 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+
+import org.apache.commons.io.Charsets;
 
 /**
  * This class is a simple application that writes a random number on a file.
@@ -77,9 +80,8 @@ public class BadIOGUI {
         read.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(final ActionEvent r) {
-                final File path = new File(PATH);
                try {
-                System.out.println(Files.readAllLines(path.toPath()));
+                System.out.println(Files.readAllLines(new File(PATH).toPath(), Charsets.UTF_8));
             } catch (IOException err) {
                 err.printStackTrace();
             }
